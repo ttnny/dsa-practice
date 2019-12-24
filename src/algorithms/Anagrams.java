@@ -2,10 +2,10 @@ package algorithms;
 
 import java.util.Arrays;
 
+/**
+ * Problem: Given 2 strings -> Check if they are anagram of each other
+ */
 public class Anagrams {
-    /**
-     * Problem: Given 2 strings -> Check if they are anagram of each other
-     */
     private static boolean detectAnagram(String a, String b) {
         // The strings should have the same length
         if (a.length() != b.length())

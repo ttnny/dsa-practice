@@ -1,9 +1,9 @@
 package algorithms;
 
+/**
+ * Problem: Given a string -> Check if it has any consecutive duplicates
+ */
 public class ConsecutiveDuplicates {
-    /**
-     * Problem: Given a string -> Check if it has any consecutive duplicates
-     */
     private static boolean hasConsecutiveDuplicate(String s) {
         // Convert string to lowercase char array
         char[] chars = s.toLowerCase().toCharArray();
