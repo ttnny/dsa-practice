@@ -2,9 +2,9 @@ package algorithms;
 
 import java.util.Arrays;
 
-public class AnagramDetection {
+public class Anagrams {
     /**
-     * Problem: Given 2 string -> Check if they are anagram of each other
+     * Problem: Given 2 strings -> Check if they are anagram of each other
      */
     private static boolean detectAnagram(String a, String b) {
         // The strings should have the same length
@@ -26,7 +26,7 @@ public class AnagramDetection {
 
         return true;
     }
-    
+
     public static void main(String[] args) {
         System.out.println(detectAnagram("cat", "tca"));
         System.out.println(detectAnagram("peeK", "keeP"));
