@@ -7,6 +7,7 @@ public class AnagramDetection {
      * Problem: Given 2 string -> Check if they are anagram of each other
      */
     private static boolean detectAnagram(String a, String b) {
+        // The strings should have the same length
         if (a.length() != b.length())
             return false;
 
@@ -25,8 +26,7 @@ public class AnagramDetection {
 
         return true;
     }
-
-
+    
     public static void main(String[] args) {
         System.out.println(detectAnagram("cat", "tca"));
         System.out.println(detectAnagram("peeK", "keeP"));
