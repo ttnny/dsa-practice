@@ -1,6 +1,8 @@
 package algorithms;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Problem: Given an array of integers, return indices of the two numbers such that they add up to a specific target.
@@ -27,7 +29,28 @@ public class TwoSum {
         return new int[]{};
     }
 
+    // Approach 2: Two-pass Hash Table -> O(n)
+    private static int[] twoSum2(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            map.put(nums[i], i);
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
+            if (map.containsKey(complement) && map.get(complement) != i) {
+                return new int[]{i, map.get(complement)};
+            }
+        }
+
+        return new int[]{};
+    }
+
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(twoSum1(new int[]{11, 7, 15, 2}, 9)));
+        int[] nums = {11, 7, 15, 2};
+        int target = 9;
+
+        System.out.println(Arrays.toString(twoSum1(nums, target)));
+        System.out.println(Arrays.toString(twoSum2(nums, target)));
     }
 }
